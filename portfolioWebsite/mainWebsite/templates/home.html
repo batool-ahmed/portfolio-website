@@ -1,0 +1,55 @@
+{% include 'header.html' %}
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center">
+              <h3>Portfolios Collection</h3>
+              <p>
+                A platform where you can upload, manage and showcase all of your porfolios.
+              </p>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio bg-grey">
+      <div class="container">
+        
+        <div class="section-title">
+          <h2>Portfolios</h2>
+          <p>Check out the portfolios uploaded by our users</p>
+        </div>
+        
+        <div class="row portfolio-container">
+          
+          {% for post in posts %}
+          <div class="col-md-12 portfolio-item container white-div text-center padding-top-2 hotizontal-center">
+            <div>
+              <div>
+                <image src="{{MEDIA_URL}}{{post.image}}" class="img-left" width='20%' alt="portfolio image"/>
+                <!-- <image src="../static/" class="img-left" width='20%' alt="portfolio image"/> -->
+              </div>
+              <div class="portfolio-info white-div padding-top-2">
+                <h3>{{post.title}}</h3>
+                <h5><em>{{post.author}}</em></h5>
+                <p>{{post.content}}</p>
+                <!-- <p>{{ post.image.url }}</p> -->
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          
+        </div>
+      </div>
+    </section>
+  <!-- End Portfolio Section -->
+{% include 'footer.html' %}

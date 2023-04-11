@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+    <!-- <form method="POST" class="padding-5 padding-top-2">
+        <h2 class="text-center">Create a Portfolio</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="title">Title</label>
+        <input class="createField" type = "text" placeholder='Title' name="title" />
+        
+        <label for="image" class="padding-top-2">Image</label>
+        <input class="createField" name = "image" type="file"/>
+        
+        <label for="one-liner" class="padding-top-2">One-line Description of your project</label>
+        <br/>
+        <textarea class="createField"  maxlength="50">
+        </textarea>
+        
+        <label for="content" class="padding-top-2">About your project</label>
+        <br/>
+        <textarea class="createField">
+        </textarea>
+        <br/>
+        
+        <input type='submit' class="pink-button horizontal-center">
+    </form> -->
+    <form method="post" class="padding-5 padding-top-2" enctype="multipart/form-data">
+        <h3 class="text-center">New Portfolio</h3>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="pink-button horizontal-center">Create</button>
+     </form>
+
+{% include 'footer.html' %}

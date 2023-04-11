@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+{% load crispy_forms_tags %}
+    <!-- <form method="POST" class="padding-5 padding-top-2">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="pink-button horizontal-center">Login</button>
+        <input class ="signinField" type = "text" placeholder='Name' name="name" />
+        <input class ="signinField" type = "email" placeholder='Email' name="email" />
+        <input id="password" class="signinField" placeholder='Password' type = "password" name="password" />
+        <input type='submit' class="pink-button signin-button" value="Sign up">
+    </form> -->
+    <form action="" method="post" class="padding-5 padding-top-2">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="pink-button horizontal-center" type="submit">Sign Up</button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+    </div>
+{% include 'footer.html' %}

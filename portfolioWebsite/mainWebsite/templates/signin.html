@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+    <!-- <form method="POST" class="signinBox center">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class ="signinField" type = "email" placeholder='Email' name="email" />
+        <input id="password" class="signinField" placeholder='Password' type = "password" name="password" />
+        <input type='submit' class="pink-button signin-button" value="Sign in">
+        <p class="centerText">Don't have an account? <a href="{% url 'signup' %}"><strong>Sign up</strong></a></p> -->
+
+        <form method="post"class="signinBox center">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="pink-button signin-button">Login</button>
+            <p class="centerText">Don't have an account? <a href="{% url 'signup' %}"><strong>Sign up</strong></a></p>
+        </form>
+    
+    <!-- </form> -->
+{% include 'footer.html' %}
